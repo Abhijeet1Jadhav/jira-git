@@ -1,0 +1,29 @@
+name: Update JIRA Confluence Page
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+env:
+  JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
+  JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
+  CONFLUENCE_URL: ${{ secrets.CONFLUENCE_URL }}
+jobs:
+  update_jira_confluence:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install --upgrade pip && pip install jira jiraconfluence
+
+      - name: Update JIRA Confluence
+        run: |
+          python update_jira_confluence.py
