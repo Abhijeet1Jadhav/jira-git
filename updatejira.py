@@ -2,10 +2,10 @@ from jira import JIRA
 from atlassian import Confluence
 import os
 os.environ['JIRA_USERNAME'] = 'jadhavabhijeet6411@gmail.com'
-os.environ['JIRA_PASSWORD'] = 'Sunnyaj@3024'
+os.environ['JIRA_PASSWORD'] = 'ATATT3xFfGF018_CYI9NHU0OOWFf07Pax1hyAtYfKVRbF1aVbUZKj9UC5Jut8YNSeFmpU1GD6FKkB3THnZEsCEywIsA0VzjJshj2Z1ReyuH9rRyZ8WJzTmCRigjOvWUTx2NpCvZGdnZS4toJtfWwSAamuzEJvHOjGOttz80IdIjdJIYbztTKTkE=55A0A156'
 
 # Connect to JIRA
-jira = JIRA(server='https://demo-sw.atlassian.net/jira/', basic_auth=(os.environ['JIRA_USERNAME'], os.environ['JIRA_PASSWORD']))
+jira = JIRA(server='https://demo-sw.atlassian.net', basic_auth=(os.environ['JIRA_USERNAME'], os.environ['JIRA_PASSWORD']))
 
 # Connect to Confluence
 confluence = Confluence(url=os.environ['https://demo-sw.atlassian.net/wiki/spaces/~71202026b01f91e1a3436291135759a5455a0e/pages/393217/PR+requests'], username=os.environ['JIRA_USERNAME'], password=os.environ['JIRA_PASSWORD'])
