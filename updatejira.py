@@ -18,5 +18,5 @@ pr_title = os.getenv('GITHUB_HEAD_REF')
 page_id = '393217'  # Replace with the ID of your Confluence page
 page = confluence.get_page_by_id(page_id)
 table_content = f"| {pr_number} | {pr_title} |\n"  # Customize the table structure as needed
-new_content = f"{page['body']['storage']['value']}\n{table_content}"
+#new_content = f"{page['body']['storage']['value']}\n{table_content}"
 confluence.update_page_content(page_id, new_content)
