@@ -27,4 +27,4 @@ jobs:
 
       - name: Update JIRA Confluence
         run: |
-          python update_jira_confluence.py
+          python updatejira.py
