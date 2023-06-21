@@ -4,6 +4,7 @@ on:
     types:
       - opened
       - synchronize
+      - closed
 env:
   JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
   JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
