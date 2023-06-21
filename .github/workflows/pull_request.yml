@@ -23,7 +23,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install --upgrade pip && pip install atlassian-python-api
+        run: pip install --upgrade pip && pip install atlassian-python-api && pip install jira
 
       - name: Update JIRA Confluence
         run: |
