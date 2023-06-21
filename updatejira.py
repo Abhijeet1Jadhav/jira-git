@@ -1,10 +1,8 @@
 from jira import JIRA
 from atlassian import Confluence
-
-env:
-  JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
-  JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
-  CONFLUENCE_URL: ${{ secrets.CONFLUENCE_URL }}
+import os
+os.environ['JIRA_USERNAME'] = 'jadhavabhijeet6411@gmail.com'
+os.environ[JIRA_PASSWORD'] = 'Sunnyaj@3024'
 
 # Connect to JIRA
 jira = JIRA(server='https://demo-sw.atlassian.net/jira/', basic_auth=(os.environ['JIRA_USERNAME'], os.environ['JIRA_PASSWORD']))
