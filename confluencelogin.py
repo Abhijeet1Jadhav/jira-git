@@ -15,7 +15,7 @@ resp, content = h.request(
  uri=login_url, 
  method='POST',
  headers = headers,
- body=urllib.urlencode(body)
+ body= urllib.parse.urlencode(body)
 )
 cookies = resp.get("set-cookie")
 headers = {'Cookie': cookies}
