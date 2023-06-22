@@ -1,4 +1,4 @@
-name: Update JIRA Confluence Page
+name: Update JIRA
 on:
   pull_request:
     types:
