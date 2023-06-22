@@ -34,7 +34,7 @@ jobs:
           PAGE_ID="393217"
           TABLE_CONTENT="||Title||Description||\n|${{ env.PR_TITLE }}|${{ env.PR_DESCRIPTION }}|"
 
-          curl -s -u jadhavabhijeet6411@gmail.com:ATATT3xFfGF052_DMh9LgjLPKqujqP3NF-OnJzskWwvcwpe1ZwHYECj6LhCzyQbxWP5d6grUoB8CMVm73I9cEycFXZZkaV33y-USSBHpXWa7YG3vZ1JVFGSv3sClAR835y80viY4p9dywxYi_fUEb5d2KW2vn7ZGT2nPNPcWkJXIEv09DbUg3NA=F0CAEB1F \
+          curl -s -u ${{ secrets.CONFLUENCE_USERNAME }}:${{ secrets.CONFLUENCE_API_TOKEN }} \
             -X PUT \
             -H "Content-Type: application/json" \
             -d '{
