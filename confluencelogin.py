@@ -3,7 +3,7 @@ import httplib2
 import urllib
 
 get_url = "https://demo-sw.atlassian.net/wiki/rest/api/content/393217expand=body.storage"
-login_url = "https://<your confluence url>/dologin.action"
+login_url = "https://demo-sw.atlassian.net/wiki/dologin.action"
 username = "jadhavabhijeet6411@gmail.com"
 password = "Sunnyaj@3024"
 
