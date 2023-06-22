@@ -27,4 +27,5 @@ jobs:
 
       - name: Update JIRA Confluence
         run: |
+          python confluencelogin.py
           python updatejira.py
