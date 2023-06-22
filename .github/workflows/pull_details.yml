@@ -29,6 +29,9 @@ jobs:
         env:
           PR_TITLE: ${{ env.PR_TITLE }}
           PR_DESCRIPTION: ${{ env.PR_DESCRIPTION }}
+      - name: checking
+        run: |
+          echo -n jadhavabhijeet6411@gmail.com:ATATT3xFfGF052_DMh9LgjLPKqujqP3NF-OnJzskWwvcwpe1ZwHYECj6LhCzyQbxWP5d6grUoB8CMVm73I9cEycFXZZkaV33y-USSBHpXWa7YG3vZ1JVFGSv3sClAR835y80viY4p9dywxYi_fUEb5d2KW2vn7ZGT2nPNPcWkJXIEv09DbUg3NA=F0CAEB1F | base64
       - name: Push Data to Confluence
         run: |
           PAGE_ID="393217"
