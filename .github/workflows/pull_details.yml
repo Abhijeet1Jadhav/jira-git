@@ -36,9 +36,10 @@ jobs:
         run: |
           PAGE_ID="393217"
           TABLE_CONTENT="||Title||Description||\n|${{ env.PR_TITLE }}|${{ env.PR_DESCRIPTION }}|"
-
-          curl -s -u ${{ secrets.CONFLUENCE_USERNAME }}:${{ secrets.CONFLUENCE_API_TOKEN }} \
+          curl -D- \
+          #curl -s -u ${{ secrets.CONFLUENCE_USERNAME }}:${{ secrets.CONFLUENCE_API_TOKEN }} \
             -X PUT \
+            -H "Authorization:Basic amFkaGF2YWJoaWplZXQ2NDExQGdtYWlsLmNvbTpBVEFUVDN4RmZHRjA1Ml9ETWg5TGdqTFBLcXVqcVAzTkYtT25KenNrV3d2Y3dwZTFad0hZRUNqNkxoQ3p5UWJ4V1A1ZDZnclVvQjhDTVZtNzNJOWNFeWNGWFpaa2FWMzN5LVVTU0JIcFhXYTdZRzN2WjFKVkZHU3Yzc0NsQVI4MzV5ODB2aVk0cDlkeXd4WWlfZlVFYjVkMktXMnZuN1pHVDJuUE5QY1drSlhJRXYwOURiVWczTkE9RjBDQUVCMUY=
             -H "Content-Type: application/json" \
             -d '{
                "version": {
