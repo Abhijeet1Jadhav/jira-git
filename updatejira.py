@@ -5,7 +5,7 @@ os.environ['JIRA_USERNAME'] = 'jadhavabhijeet6411@gmail.com'
 os.environ['JIRA_PASSWORD'] = 'ATATT3xFfGF018_CYI9NHU0OOWFf07Pax1hyAtYfKVRbF1aVbUZKj9UC5Jut8YNSeFmpU1GD6FKkB3THnZEsCEywIsA0VzjJshj2Z1ReyuH9rRyZ8WJzTmCRigjOvWUTx2NpCvZGdnZS4toJtfWwSAamuzEJvHOjGOttz80IdIjdJIYbztTKTkE=55A0A156'
 
 # Connect to JIRA
-jira = JIRA(server='https://demo-sw.atlassian.net/jira', basic_auth=("jadhavabhijeet6411@gmail.com", "ATATT3xFfGF0Q3evy1tGz9XlYXsxZ66CKlkq3tCqd6K6W1CtT87mB6v4Z9jHV3FqSMGYSnapR25gdtG0JQEaBOr4MhUrFC2RKIFNzy5mHdPpJSgjn3X95gk-gN3b6urTtXULgir1hjEqeHDky-dOY6dkHS-R8U__b-CEok9oPHjVWKLYR7KGbLA=90C2A2DB"))
+jira = JIRA(server='https://demo-sw.atlassian.net/jira', basic_auth=(jadhavabhijeet6411@gmail.com, ATATT3xFfGF0Q3evy1tGz9XlYXsxZ66CKlkq3tCqd6K6W1CtT87mB6v4Z9jHV3FqSMGYSnapR25gdtG0JQEaBOr4MhUrFC2RKIFNzy5mHdPpJSgjn3X95gk-gN3b6urTtXULgir1hjEqeHDky-dOY6dkHS-R8U__b-CEok9oPHjVWKLYR7KGbLA=90C2A2DB))
 
 # Connect to Confluence
 confluence = Confluence(url="https://demo-sw.atlassian.net/wiki", username="jadhavabhijeet6411@gmail.com", password="ATATT3xFfGF0Q3evy1tGz9XlYXsxZ66CKlkq3tCqd6K6W1CtT87mB6v4Z9jHV3FqSMGYSnapR25gdtG0JQEaBOr4MhUrFC2RKIFNzy5mHdPpJSgjn3X95gk-gN3b6urTtXULgir1hjEqeHDky-dOY6dkHS-R8U__b-CEok9oPHjVWKLYR7KGbLA=90C2A2DB")
