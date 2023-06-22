@@ -34,7 +34,7 @@ jobs:
           PAGE_ID="393217"
           TABLE_CONTENT="||Title||Description||\n|${{ env.PR_TITLE }}|${{ env.PR_DESCRIPTION }}|"
 
-          curl -s -u jadhavabhijeet6411@gmail.com:ATCTT3xFfGN0WHYhd7CwzYf5_A-14HswfpRlvoI0qL16_j_s0j2NDtwYKaXlSgGdfDubusiS-ujOxEsQUDWtUR2AF-Wny3I_F3hbNci2KsekO8dBgM1xSTFbU4BL9tV1j4WCTUvjQUuDkKZFoDHNqpljFkOCM5t9PvWSOMkfScd2pwo6orTe8YA=15D94BAD \
+          curl -s -u jadhavabhijeet6411@gmail.com:confluence - ATATT3xFfGF052_DMh9LgjLPKqujqP3NF-OnJzskWwvcwpe1ZwHYECj6LhCzyQbxWP5d6grUoB8CMVm73I9cEycFXZZkaV33y-USSBHpXWa7YG3vZ1JVFGSv3sClAR835y80viY4p9dywxYi_fUEb5d2KW2vn7ZGT2nPNPcWkJXIEv09DbUg3NA=F0CAEB1F \
             -X PUT \
             -H "Content-Type: application/json" \
             -d '{
