@@ -31,7 +31,7 @@ jobs:
           PR_DESCRIPTION: ${{ env.PR_DESCRIPTION }}
       - name: Push Data to Confluence
         run: |
-          PAGE_ID="<Confluence_Page_ID>"
+          PAGE_ID="393217"
           TABLE_CONTENT="||Title||Description||\n|${{ env.PR_TITLE }}|${{ env.PR_DESCRIPTION }}|"
 
           curl -s -u ${{ secrets.CONFLUENCE_USERNAME }}:${{ secrets.CONFLUENCE_API_TOKEN }} \
@@ -39,9 +39,9 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{
                "version": {
-                 "number": <Current_Page_Version>
+                 "number": 1
                   },
-               "title": "<Page_Title>",
+               "title": "PR requests",
                "type": "page",
                "body": {
                  "storage": {
@@ -50,4 +50,4 @@ jobs:
                  }
                }
             }' \
-          https://<your-domain>.atlassian.net/wiki/rest/api/content/${PAGE_ID}
+          https://demo-sw.atlassian.net/wiki/rest/api/content/393217
