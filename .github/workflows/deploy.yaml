@@ -1,6 +1,9 @@
 name: CI/CD with Minikube
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -18,7 +21,6 @@ jobs:
 
       - name: Deploy to Minikube
         run: |
-          kubectl config use-context minikube  # Set the context to "minikube" in the kubeconfig
           kubectl apply -f ./path/to/your/kubernetes/manifests-directory
 
       - name: Cleanup
