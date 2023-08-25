@@ -20,7 +20,4 @@ jobs:
           cp kubeconfig.yaml ~/.kube/config
 
       - name: Deploy to Minikube
-        run: |
-          cd master/k8-app
-          pwd
-          kubectl apply -f .
+        run: kubectl apply -f k8-app/
