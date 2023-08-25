@@ -1,0 +1,28 @@
+name: CI/CD with Minikube
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Minikube Kubeconfig
+        run: |
+          echo "$KUBE_CONFIG" > kubeconfig.yaml
+          mkdir -p ~/.kube
+          cp kubeconfig.yaml ~/.kube/config
+
+      - name: Deploy to Minikube
+        run: |
+          kubectl config use-context minikube  # Set the context to "minikube" in the kubeconfig
+          kubectl apply -f ./path/to/your/kubernetes/manifests-directory
+
+      - name: Cleanup
+        run: minikube stop
