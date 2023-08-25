@@ -21,4 +21,5 @@ jobs:
 
       - name: Deploy to Minikube
         run: |
-          kubectl apply -f dockertest
+          kubectl config use-context minikube  # Set the context to "minikube" in the kubeconfig
+          kubectl apply -f /k8-app/
